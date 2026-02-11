@@ -58,7 +58,7 @@ export default function Stats() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} className="py-16 md:py-20 bg-white border-y border-neutral-100">
+    <section ref={ref} className="py-16 md:py-20 bg-neutral-900">
       <div className="max-w-5xl mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, i) => (
@@ -69,14 +69,14 @@ export default function Stats() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="text-center"
             >
-              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-indigo-600 tracking-tight tabular-nums">
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight tabular-nums">
                 <Counter
                   target={stat.number}
                   suffix={stat.suffix}
                   start={isInView}
                 />
               </p>
-              <p className="mt-1 text-sm md:text-base text-neutral-600 font-medium">
+              <p className="mt-1 text-sm md:text-base text-neutral-400 font-medium">
                 {stat.label}
               </p>
             </motion.div>

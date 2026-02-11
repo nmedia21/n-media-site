@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BOOKING_URL, BOOKING_IS_EXTERNAL } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -40,9 +39,7 @@ export default function Hero() {
           className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <Link
-            href={BOOKING_URL}
-            target={BOOKING_IS_EXTERNAL ? "_blank" : undefined}
-            rel={BOOKING_IS_EXTERNAL ? "noopener noreferrer" : undefined}
+            href="/contact"
             className="inline-flex items-center justify-center px-8 py-4 rounded-2xl btn-primary text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
           >
             Démarrer mon projet

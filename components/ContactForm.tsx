@@ -2,12 +2,13 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Send, Mail, MapPin, Check } from "lucide-react";
+import { Send, Mail, MapPin, Check, Phone } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,7 +22,7 @@ export default function ContactForm() {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     }, 4000);
   };
 
@@ -46,14 +47,18 @@ export default function ContactForm() {
           <h1 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
             Parlons de votre projet
           </h1>
-          <p className="text-primary-600 mb-16 max-w-xl font-light leading-relaxed">
-            Une idée, un projet, une question ? On adore les échanges ! N’hésitez pas à nous partager votre vision.
+          <p className="text-primary-600 mb-4 max-w-xl font-light leading-relaxed">
+            Une idée, un projet, une question ? N’hésitez pas à nous partager votre vision.
+          </p>
+          <p className="text-primary-500 text-sm mb-16 font-medium">
+            Une fois le formulaire envoyé, nous vous recontacterons.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="space-y-10">
               {[
                 { icon: Mail, label: "Email", value: "contact@n-media.fr", href: "mailto:contact@n-media.fr" },
+                { icon: Phone, label: "Téléphone", value: "Sur demande après envoi du formulaire", href: "#" },
                 { icon: MapPin, label: "Localisation", value: "France", href: "#" },
               ].map((item) => (
                 <div key={item.label}>
@@ -89,7 +94,7 @@ export default function ContactForm() {
                         <Check className="w-6 h-6 text-accent" strokeWidth={2} />
                       </div>
                       <p className="font-display text-xl font-semibold text-primary-900">Message envoyé</p>
-                      <p className="text-primary-600 text-sm mt-1">Nous vous répondrons rapidement.</p>
+                      <p className="text-primary-600 text-sm mt-1">Nous vous recontacterons très prochainement.</p>
                     </div>
                   </motion.div>
                 )}
@@ -126,6 +131,21 @@ export default function ContactForm() {
                         placeholder="votre@email.com"
                       />
                     </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="phone" className="block text-xs font-medium tracking-widest uppercase text-primary-500 mb-2">
+                      Téléphone
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-0 py-3 bg-transparent border-b border-primary-200 text-primary-900 placeholder-primary-400 focus:outline-none focus:border-primary-900 transition-colors"
+                      placeholder="+33 (0)6 12 34 56 78"
+                    />
                   </div>
 
                   <div>

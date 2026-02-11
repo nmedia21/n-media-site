@@ -5,7 +5,6 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BOOKING_URL, BOOKING_IS_EXTERNAL } from "@/lib/site";
 
 const projects = [
   {
@@ -47,13 +46,13 @@ export default function Portfolio() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="portfolio" ref={ref} className="py-24 bg-neutral-50">
+    <section id="portfolio" ref={ref} className="py-24 bg-neutral-900">
       <div className="max-w-5xl mx-auto px-6 text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4"
+          className="text-4xl md:text-5xl font-semibold tracking-tight text-white mb-4"
         >
           Portfolio
         </motion.h2>
@@ -61,7 +60,7 @@ export default function Portfolio() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-xl text-neutral-600 max-w-xl mx-auto"
+          className="text-xl text-neutral-400 max-w-xl mx-auto"
         >
           Exemples de sites très haute gamme — e-commerce, luxe, corporate.
         </motion.p>
@@ -85,7 +84,7 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className={`${project.span} group`}
             >
-              <Link href={BOOKING_URL} target={BOOKING_IS_EXTERNAL ? "_blank" : undefined} rel={BOOKING_IS_EXTERNAL ? "noopener noreferrer" : undefined} className="block">
+              <Link href="/contact" className="block">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-200 mb-4">
                   <Image
                     src={project.image}
@@ -99,10 +98,10 @@ export default function Portfolio() {
                     {project.category}
                   </span>
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-900 mb-1 group-hover:text-indigo-600 transition-colors">
+                <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-indigo-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed line-clamp-2">
+                <p className="text-sm text-neutral-400 leading-relaxed line-clamp-2">
                   {project.description}
                 </p>
               </Link>
@@ -116,9 +115,7 @@ export default function Portfolio() {
           className="text-center"
         >
           <Link
-            href={BOOKING_URL}
-            target={BOOKING_IS_EXTERNAL ? "_blank" : undefined}
-            rel={BOOKING_IS_EXTERNAL ? "noopener noreferrer" : undefined}
+            href="/contact"
             className="inline-flex items-center justify-center px-10 py-4 rounded-2xl btn-primary text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
           >
             Créons votre projet ensemble
