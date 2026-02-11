@@ -57,7 +57,7 @@ export default function ContactForm() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="space-y-10">
               {[
-                { icon: Mail, label: "Email", value: "contact@n-media.fr", href: "mailto:contact@n-media.fr" },
+                { icon: Mail, label: "Email", value: "contact@n-media.online", href: "mailto:contact@n-media.online" },
                 { icon: Phone, label: "Téléphone", value: "Sur demande après envoi du formulaire", href: "#" },
                 { icon: MapPin, label: "Localisation", value: "France", href: "#" },
               ].map((item) => (

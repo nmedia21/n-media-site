@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-xs text-neutral-500 uppercase tracking-wider mb-4">Contact</p>
-              <p className="text-sm">contact@n-media.fr</p>
+              <p className="text-sm">contact@n-media.online</p>
             </div>
           </div>
         </div>

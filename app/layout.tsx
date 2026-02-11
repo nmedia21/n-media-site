@@ -75,7 +75,7 @@ export default function RootLayout({
   potentialAction: {
     "@type": "ContactAction",
     target: { "@type": "EntryPoint", urlTemplate: `${siteUrl}/contact` },
-    "http://schema.org/contactOption": "contact@n-media.fr",
+    "http://schema.org/contactOption": "contact@n-media.online",
   },
 };
 
