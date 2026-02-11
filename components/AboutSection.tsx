@@ -29,7 +29,7 @@ export default function AboutSection() {
             À propos
           </p>
           <h1 className="text-3xl md:text-5xl font-bold text-primary-900 mb-10 leading-tight">
-            L'agence qui transforme
+            L&apos;agence qui transforme
             <br />
             <span className="text-gradient">vos ambitions</span> en réalité
           </h1>

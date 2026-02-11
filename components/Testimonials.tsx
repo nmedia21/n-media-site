@@ -55,7 +55,7 @@ export default function Testimonials() {
               key={i}
               className="flex-shrink-0 w-[340px] md:w-[380px] p-8 rounded-3xl bg-neutral-50"
             >
-              <p className="text-neutral-700 text-lg leading-relaxed mb-6">"{quote.text}"</p>
+              <p className="text-neutral-700 text-lg leading-relaxed mb-6">&quot;{quote.text}&quot;</p>
               <p className="font-semibold text-neutral-900">{quote.author}</p>
               <p className="text-sm text-neutral-500">{quote.role}</p>
             </div>

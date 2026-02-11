@@ -18,7 +18,7 @@ export default function Presentation() {
           transition={{ duration: 0.7 }}
           className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-900 mb-6"
         >
-          Plus qu'une agence,
+          Plus qu&apos;une agence,
           <br />
           un partenaire créatif.
         </motion.h2>
@@ -40,7 +40,7 @@ export default function Presentation() {
             href="/about"
             className="inline-flex items-center justify-center px-8 py-4 rounded-2xl btn-primary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
           >
-            Découvrir l'agence
+            Découvrir l&apos;agence
           </Link>
         </motion.div>
       </div>

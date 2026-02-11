@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 const orbitron = Orbitron({ weight: ["600", "700", "800"], subsets: ["latin"], variable: "--font-logo-n" });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://n-media.fr";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://n-media.online";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
