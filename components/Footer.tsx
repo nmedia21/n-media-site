@@ -40,8 +40,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-neutral-800 text-sm text-neutral-500">
-          © {new Date().getFullYear()} N-Med.ia
+        <div className="mt-12 pt-8 border-t border-neutral-800 text-sm text-neutral-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <span>© {new Date().getFullYear()} N-Med.ia</span>
+          <Link href="/mentions-legales" className="hover:text-white transition-colors">
+            Mentions légales
+          </Link>
         </div>
       </div>
     </footer>
