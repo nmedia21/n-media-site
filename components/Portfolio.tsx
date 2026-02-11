@@ -114,8 +114,11 @@ export default function Portfolio() {
           transition={{ delay: 0.3 }}
           className="text-center"
         >
-          <Link href="/contact" className="text-indigo-600 hover:underline font-medium">
-            Discutons de votre projet
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-10 py-4 rounded-2xl btn-primary text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+          >
+            Créons votre projet ensemble
           </Link>
         </motion.div>
       </div>

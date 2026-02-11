@@ -2,13 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Send, Mail, Phone, MapPin, Check } from "lucide-react";
+import { Send, Mail, MapPin, Check } from "lucide-react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,7 +21,7 @@ export default function ContactForm() {
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      setFormData({ name: "", email: "", message: "" });
     }, 4000);
   };
 
@@ -55,7 +54,6 @@ export default function ContactForm() {
             <div className="space-y-10">
               {[
                 { icon: Mail, label: "Email", value: "contact@n-media.fr", href: "mailto:contact@n-media.fr" },
-                { icon: Phone, label: "Téléphone", value: "+33 (0)X XX XX XX XX", href: "tel:+33XXXXXXXXX" },
                 { icon: MapPin, label: "Localisation", value: "France", href: "#" },
               ].map((item) => (
                 <div key={item.label}>
@@ -128,21 +126,6 @@ export default function ContactForm() {
                         placeholder="votre@email.com"
                       />
                     </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-xs font-medium tracking-widest uppercase text-primary-500 mb-2">
-                      Téléphone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-0 py-3 bg-transparent border-b border-primary-200 text-primary-900 placeholder-primary-400 focus:outline-none focus:border-primary-900 transition-colors"
-                      placeholder="+33 (0)X XX XX XX XX"
-                    />
                   </div>
 
                   <div>

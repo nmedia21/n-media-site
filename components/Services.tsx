@@ -78,9 +78,9 @@ export default function Services() {
               </p>
               <Link
                 href="/contact"
-                className="text-indigo-600 hover:underline font-medium"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-xl bg-neutral-900 text-white font-semibold text-sm hover:bg-indigo-600 transition-all duration-300"
               >
-                En savoir plus
+                Demander un devis
               </Link>
             </motion.div>
           ))}

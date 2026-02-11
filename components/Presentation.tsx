@@ -38,9 +38,9 @@ export default function Presentation() {
         >
           <Link
             href="/about"
-            className="text-indigo-600 hover:underline font-medium"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-2xl btn-primary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
           >
-            En savoir plus
+            Découvrir l'agence
           </Link>
         </motion.div>
       </div>

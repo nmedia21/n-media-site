@@ -40,16 +40,15 @@ export default function Hero() {
         >
           <Link
             href="/contact"
-            className="text-indigo-600 hover:text-indigo-700 font-medium text-lg"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-2xl btn-primary text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
           >
-            Nous contacter
+            Démarrer mon projet
           </Link>
-          <span className="hidden sm:inline text-neutral-300">—</span>
           <Link
             href="/#services"
-            className="text-indigo-600 hover:text-indigo-700 font-medium text-lg"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-2xl border-2 border-neutral-300 text-neutral-700 font-semibold text-lg hover:border-indigo-500 hover:text-indigo-600 hover:bg-indigo-50/50 transition-all duration-300"
           >
-            Découvrir nos services
+            Nos services
           </Link>
         </motion.div>
       </div>

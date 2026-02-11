@@ -61,10 +61,10 @@ export default function AboutSection() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 text-sm font-medium tracking-wide text-indigo-700 hover:text-indigo-600 transition-colors border-b border-indigo-300 pb-1 hover:border-indigo-600"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
           >
-            <span>Parlons de votre projet</span>
-            <span className="text-indigo-500">→</span>
+            <span>Démarrer mon projet</span>
+            <span aria-hidden>→</span>
           </Link>
         </motion.div>
       </div>
