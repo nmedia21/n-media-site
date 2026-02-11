@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import { BOOKING_URL, BOOKING_IS_EXTERNAL } from "@/lib/site";
 
 const values = [
   "Excellence en web design : chaque interface est pensée pour séduire et convertir.",
@@ -60,7 +61,9 @@ export default function AboutSection() {
           </div>
 
           <Link
-            href="/contact"
+            href={BOOKING_URL}
+            target={BOOKING_IS_EXTERNAL ? "_blank" : undefined}
+            rel={BOOKING_IS_EXTERNAL ? "noopener noreferrer" : undefined}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl btn-primary text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
           >
             <span>Démarrer mon projet</span>

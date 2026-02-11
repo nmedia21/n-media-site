@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Globe, RefreshCw, Palette, Code, Cpu } from "lucide-react";
 import Link from "next/link";
+import { BOOKING_URL } from "@/lib/site";
 
 const services = [
   {
@@ -77,7 +78,9 @@ export default function Services() {
                 {service.description}
               </p>
               <Link
-                href="/contact"
+                href={BOOKING_URL}
+                target={BOOKING_IS_EXTERNAL ? "_blank" : undefined}
+                rel={BOOKING_IS_EXTERNAL ? "noopener noreferrer" : undefined}
                 className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-xl bg-neutral-900 text-white font-semibold text-sm hover:bg-indigo-600 transition-all duration-300"
               >
                 Demander un devis

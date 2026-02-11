@@ -5,6 +5,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { BOOKING_URL, BOOKING_IS_EXTERNAL } from "@/lib/site";
 
 const projects = [
   {
@@ -84,7 +85,7 @@ export default function Portfolio() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className={`${project.span} group`}
             >
-              <Link href="/contact" className="block">
+              <Link href={BOOKING_URL} target={BOOKING_IS_EXTERNAL ? "_blank" : undefined} rel={BOOKING_IS_EXTERNAL ? "noopener noreferrer" : undefined} className="block">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-neutral-200 mb-4">
                   <Image
                     src={project.image}
@@ -115,7 +116,9 @@ export default function Portfolio() {
           className="text-center"
         >
           <Link
-            href="/contact"
+            href={BOOKING_URL}
+            target={BOOKING_IS_EXTERNAL ? "_blank" : undefined}
+            rel={BOOKING_IS_EXTERNAL ? "noopener noreferrer" : undefined}
             className="inline-flex items-center justify-center px-10 py-4 rounded-2xl btn-primary text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
           >
             Créons votre projet ensemble
