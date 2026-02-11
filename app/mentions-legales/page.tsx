@@ -25,7 +25,7 @@ export default function MentionsLegalesPage() {
               <strong>N-Med.ia</strong><br />
               Auto-entreprise<br />
               15 rue de Niederbronn<br />
-              67200 Strasbourg<br />
+              67000 Strasbourg<br />
               France
             </p>
             <p className="mt-2">
