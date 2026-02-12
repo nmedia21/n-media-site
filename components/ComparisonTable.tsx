@@ -138,16 +138,16 @@ export default function ComparisonTable() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center justify-between gap-3 py-2 px-3 rounded-lg bg-indigo-50 border border-indigo-100">
-                    <NMediaLogo className="text-indigo-700 text-sm" />
-                    <Cell value={row.nmedia} />
+                    <NMediaLogo className="text-indigo-700 text-sm min-w-0" />
+                    <span className="w-16 shrink-0 flex justify-end items-center"><Cell value={row.nmedia} /></span>
                   </li>
                   <li className="flex items-center justify-between gap-3 py-2 px-3 rounded-lg bg-neutral-100/80">
-                    <span className="text-neutral-600 text-sm font-medium">Agence classique</span>
-                    <Cell value={row.agence} />
+                    <span className="text-neutral-600 text-sm font-medium min-w-0">Agence classique</span>
+                    <span className="w-16 shrink-0 flex justify-end items-center"><Cell value={row.agence} /></span>
                   </li>
                   <li className="flex items-center justify-between gap-3 py-2 px-3 rounded-lg bg-neutral-100/80">
-                    <span className="text-neutral-600 text-sm font-medium">Freelance</span>
-                    <Cell value={row.freelance} />
+                    <span className="text-neutral-600 text-sm font-medium min-w-0">Freelance</span>
+                    <span className="w-16 shrink-0 flex justify-end items-center"><Cell value={row.freelance} /></span>
                   </li>
                 </ul>
               </motion.div>
