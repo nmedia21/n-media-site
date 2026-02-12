@@ -35,25 +35,29 @@ export default function Testimonials() {
   const ref = useRef(null);
 
   return (
-    <section ref={ref} className="py-24 bg-white overflow-hidden">
+    <section ref={ref} className="relative py-24 bg-white overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white to-transparent pointer-events-none z-10" />
       <div className="max-w-5xl mx-auto px-6 text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="text-4xl md:text-5xl font-semibold tracking-tight text-neutral-900 mb-4"
         >
           Ce que disent nos clients
         </motion.h2>
       </div>
 
-      <div className="relative">
+      <div className="relative py-4">
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
         <div className="flex gap-8 animate-marquee-left w-max">
           {[...quotes, ...quotes].map((quote, i) => (
             <div
               key={i}
-              className="flex-shrink-0 w-[340px] md:w-[380px] p-8 rounded-3xl bg-neutral-50"
+              className="flex-shrink-0 w-[340px] md:w-[380px] p-8 rounded-3xl bg-neutral-50 border border-neutral-100 shadow-sm hover:shadow-md hover:border-indigo-100 transition-all duration-300"
             >
               <p className="text-neutral-700 text-lg leading-relaxed mb-6">&quot;{quote.text}&quot;</p>
               <p className="font-semibold text-neutral-900">{quote.author}</p>

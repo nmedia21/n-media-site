@@ -29,16 +29,16 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-neutral-50/80 backdrop-blur-xl" : "bg-transparent"
+        scrolled ? "bg-neutral-50/90 backdrop-blur-xl shadow-[0_1px_0_0_rgba(0,0,0,0.05)]" : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="flex items-center gap-1 text-3xl md:text-4xl font-semibold tracking-tight text-neutral-900 hover:opacity-90 transition-opacity group"
+            className="flex items-center gap-1 text-3xl md:text-4xl font-semibold tracking-tight text-neutral-900 hover:opacity-90 transition-all duration-200 group"
           >
-            <span className="font-logo font-bold bg-black text-white flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-2xl group-hover:-rotate-3 transition-transform duration-200 text-2xl md:text-3xl">
+            <span className="font-logo font-bold bg-black text-white flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-2xl group-hover:-rotate-3 group-hover:shadow-lg transition-all duration-200 text-2xl md:text-3xl">
               N
             </span>
             <span>-Med.ia</span>
@@ -49,7 +49,7 @@ export default function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+                className="relative text-sm text-neutral-600 hover:text-neutral-900 transition-colors py-1 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-indigo-500 after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.label}
               </Link>

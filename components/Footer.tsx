@@ -4,12 +4,15 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-900 text-neutral-400">
-      <div className="max-w-5xl mx-auto px-6 py-16">
+    <footer className="relative bg-neutral-900 text-neutral-400 overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/30 to-transparent" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_80%_at_50%_100%,rgba(99,102,241,0.04),transparent)] pointer-events-none" />
+      <div className="relative max-w-5xl mx-auto px-6 py-16">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
           <div>
-            <p className="text-3xl font-semibold tracking-tight text-white">
-              N-Med.ia
+            <p className="flex items-center gap-2 text-3xl font-semibold tracking-tight text-white">
+              <span className="font-logo font-bold bg-white text-black flex items-center justify-center rounded-xl w-9 h-9 text-xl">N</span>
+              -Med.ia
             </p>
             <p className="mt-2 text-sm text-neutral-500 max-w-sm">
               Expert en web design et en IA — Sites, refonte, interfaces et solutions intelligentes.
@@ -27,7 +30,7 @@ export default function Footer() {
                   { href: "/contact", label: "Contact" },
                 ].map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href} className="hover:text-white transition-colors">
+                    <Link href={item.href} className="hover:text-white transition-colors inline-block hover:translate-x-0.5">
                       {item.label}
                     </Link>
                   </li>
