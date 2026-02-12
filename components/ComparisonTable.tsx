@@ -123,31 +123,33 @@ export default function ComparisonTable() {
             </table>
           </div>
 
-          {/* Mobile cards */}
-          <div className="md:hidden divide-y divide-neutral-100">
+          {/* Mobile: une carte par critère, liste lisible */}
+          <div className="md:hidden p-4 space-y-4">
             {rows.map((row, index) => (
               <motion.div
                 key={row.criterion}
-                initial={{ opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 12 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.05 }}
-                className="p-4"
+                className="rounded-xl bg-neutral-50 border border-neutral-200 p-5"
               >
-                <p className="text-neutral-800 font-medium mb-3">{row.criterion}</p>
-                <div className="flex justify-between gap-4 text-sm">
-                  <div className="flex flex-col items-center gap-1">
-                    <NMediaLogo className="text-indigo-600 text-base" />
+                <p className="text-neutral-900 font-semibold text-base mb-4 leading-snug">
+                  {row.criterion}
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-center justify-between gap-3 py-2 px-3 rounded-lg bg-indigo-50 border border-indigo-100">
+                    <NMediaLogo className="text-indigo-700 text-sm" />
                     <Cell value={row.nmedia} />
-                  </div>
-                  <div className="flex flex-col items-center gap-1">
-                    <span className="text-neutral-500 font-medium">Agence</span>
+                  </li>
+                  <li className="flex items-center justify-between gap-3 py-2 px-3 rounded-lg bg-neutral-100/80">
+                    <span className="text-neutral-600 text-sm font-medium">Agence classique</span>
                     <Cell value={row.agence} />
-                  </div>
-                  <div className="flex flex-col items-center gap-1">
-                    <span className="text-neutral-500 font-medium">Freelance</span>
+                  </li>
+                  <li className="flex items-center justify-between gap-3 py-2 px-3 rounded-lg bg-neutral-100/80">
+                    <span className="text-neutral-600 text-sm font-medium">Freelance</span>
                     <Cell value={row.freelance} />
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </motion.div>
             ))}
           </div>
